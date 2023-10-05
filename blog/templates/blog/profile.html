@@ -1,0 +1,63 @@
+{% extends "main.html" %}
+{% block content %}
+    {% include "navbar.html" %}
+    {% if profile %}
+    <div class="expert-profile">
+        <aside>
+            <!-- <img class="expert-photo" src="assets/images/dut.jpg" alt="">      -->
+            <div>
+                <img class="expert-photo" src="{{ profile.photo.url }}" alt="{{profile.full_name}}">
+            </div>
+            
+            
+            <div class="expert-info">
+            <span class="expert-name">{{ profile.full_name }}</span>
+            {% if skills %}
+            {% for skill in skills %}
+                <span class="skills">{{ skill.name }}</span>
+            {% endfor %}
+            {% else %}
+            <span class="skills">{{ skill.name }}</span>
+            {% endif %}            
+
+            <button class="btn"><a href="">Download resume</a></button>
+            </div>
+        </aside>
+
+        <div class="bio">
+            <h2 >Bio</h2>
+            {% if profile.bio%}
+            <p class="bio-text">{{ profile.bio }}</p>
+            {% endif %}
+            <h2>Contact</h2>
+            {% if profile.telephone_number %}           
+            <p class="expert-phone">Tel:{{ profile.telephone_number }}</p>
+            {% endif %}
+            {% if profile.email %}
+            <p>Email:{{ profile.email }}</p> 
+            {% endif %}
+            <div class="contacts">
+                {% if profile.email %}
+                <a class="email" type="email" href="mailto:{{ profile.email }}"><i class="bi bi-envelope"></i></a>
+                {% endif %}
+
+                {% if profile.telephone_number %}
+                <a class="phone" type="phone" href="tel: {{ profile.telephone_number }}"><i class="bi bi-telephone-fill"></i></a>                  
+                {% endif %}
+
+                {% if profile.facebook_username %}
+                <a href="https://www.facebook.com/{{ profile.facebook_username }}"><i class="bi bi-facebook"></i></a>
+                {% endif %}
+
+                {% if profile.whatsapp_number %}
+                <a href="https://wa.me/{{ profile.whatsapp_number }}"><i class="bi bi-whatsapp"></i></a>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+    {% endif %}
+    {% include "footer.html" %}
+    
+{% endblock content %}

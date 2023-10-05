@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% include "navbar.html" %}
+<div class="mt8">
+    <form action="" class="form login-form">
+        <label for="">Email</label>
+        <input type="email" name="" id="">
+
+        <label for="">Password</label>
+        <input type="password" name="" id="">
+        <button type="submit">Login Now</button>
+
+        <p>Don't have an account <a href="{% url 'create_account' %}">create account</a></p>
+    </form>
+</div>
+{% include "footer.html" %}
+{% endblock content %}

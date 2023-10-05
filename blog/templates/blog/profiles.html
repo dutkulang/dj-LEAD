@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="grid-container">
+
+        {% if profiles %}
+        {% for profile in profiles %}
+        <div class="grid-item">
+
+            <div class="containr">
+              <div class="container">
+                  <img style="width: 300px; height: 550px;" src="{{ profile.photo.url }}" alt="{{profile.full_name}}" class="image profile-img">
+                  <a class="middle text" href="{% url 'profile' profile.id %}">{{ profile.full_name }}</a>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+{% endblock content %}
