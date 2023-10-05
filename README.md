@@ -5,7 +5,7 @@ This repo is to Convert the official [LEAD](https://lead.asknet.community) (Loca
 ---
 ## How to setup
  
-`Python 3 version 3.8 and pip3 must be installed on your system`
+`Python 3.8 upwards and pip3 must be installed on your system`
 
 1. clone the repo from [dj-LEAD on GitHub](https://github.com/dutkulang/dj-LEAD)
 
