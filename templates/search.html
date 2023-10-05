@@ -1,0 +1,67 @@
+<div class="search-area">
+    <div class="dropdown">
+        <button type="button dropbtn">Country <span id="down">&#9660</span></button>
+        <ul class="dropdown-content">
+            {% if countries%}
+            {% for country in countries %}
+            <li><a href="#">{{ country.name }}</a></li>
+            {% endfor %}
+            {% endif %}
+            <!-- <li><a href="">Uganda</a></li>
+            <li><a href="">Kenya</a></li>
+            <li><a href="">Tanzania</a></li>
+            <li><a href="">Rwanda</a></li>
+            <li><a href="">Ethiopia</a></li>
+            <li><a href="">Nigeria</a></li>
+            <li><a href="">Ghana</a></li>
+            <li><a href="">Egypt</a></li>
+            <li><a href="">Niger</a></li> -->
+        </ul>
+    </div>
+
+    <div class="dropdown">            
+        <button type="button dropbtn">Region <span id="down">&#9660</span></button>
+        <ul class="dropdown-content">
+            {% if regions %}
+                {% for region in regions %}
+                <li><a href="">{{ region.name }}</a></li>
+                {% endfor %}
+              
+            {% endif %}
+            <!-- <li><a href="">South Sudan</a></li>
+            <li><a href="">Uganda</a></li>
+            <li><a href="">Kenya</a></li>
+            <li><a href="">Tanzania</a></li>
+            <li><a href="">Rwanda</a></li>
+            <li><a href="">Ethiopia</a></li>
+            <li><a href="">Nigeria</a></li>
+            <li><a href="">Ghana</a></li>
+            <li><a href="">Egypt</a></li>
+            <li><a href="">Niger</a></li> -->
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button type="button dropbtn">Skills <span id="down">&#9660</span></button>
+        <ul class="dropdown-content">
+            {% if skills %}
+                {% for skill in skills %}
+                <li><a href="">{{ skill.name }}</a></li>
+                {% endfor %}
+              
+            {% endif %}
+            <!-- <li><a href="">Software engineering</a></li>
+            <li><a href="">WordPress</a></li>
+            <li><a href="">Python programming</a></li>
+            <li><a href="">content writing</a></li>
+            <li><a href="">API development</a></li>
+            <li><a href="">Ethiopia</a></li>
+            <li><a href="">Nigeria</a></li>
+            <li><a href="">Ghana</a></li>
+            <li><a href="">Egypt</a></li>
+            <li><a href="">Niger</a></li> -->
+        </ul>
+    </div>
+
+    <input type="search" name="" id="" class="search" placeholder="search by name">            
+</div>  
